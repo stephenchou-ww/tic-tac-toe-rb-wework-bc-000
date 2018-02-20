@@ -141,20 +141,13 @@ end
 
 # Define your play method below
 def play(board)
-  turn_count = 0
-  while turn_count < 9
-    currentPlayer = current_player(board)
+  until over?(board)
     turn(board)
-    over?(board)
-    overness = over?(board)
-      
-    if won?(board)
-      winner = winner(board)
-      puts "Congratulations #{winner}!"
-      break
-    elsif draw?(board)
-      puts "Cat's game!"
-      break
-    end
+  end
+  if won?(board)
+    winner = winner(board)
+    puts "Congratulations #{winner}!"
+  elsif draw?(board)
+    puts "Cat's game!"
   end
 end
