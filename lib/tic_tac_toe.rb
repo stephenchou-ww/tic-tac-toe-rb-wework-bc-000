@@ -149,12 +149,8 @@ end
 def play(board)
   turn_count = 0
   while turn_count < 9
-    if turn_count % 2 == 0
-      current_player = "X"
-    else
-      current_player = "O"
-    end
-    turn(board, current_player)
+    currentPlayer = current_player(board)
+    turn(board, currentPlayer)
     turn_count += 1
     
     if won?(board)
