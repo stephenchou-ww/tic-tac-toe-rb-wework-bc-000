@@ -110,17 +110,13 @@ def turn(board, current_player)
   index = input_to_index(input)
   validity = valid_move?(board, index)
   
-  while validity == false
-    puts "Not a valid move, please try again. Enter 1-9:"
-    input = gets.strip
-    index = input_to_index(input)
-    validity = valid_move?(board, index)
-  end
-  
-  if validity == true
+  if valid_move?(board, index)
     move(board, index, current_player)
     display_board(board)
+  else
+    turn(board, current_player)
   end
+  
 end
 
 
