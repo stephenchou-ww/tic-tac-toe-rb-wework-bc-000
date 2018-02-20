@@ -148,13 +148,12 @@ def play(board)
     turn_count += 1
     overness = over?(board)
       
-    
     if won?(board)
       winner = winner(board)
       puts "Congratulations #{winner}!"
       break
     elsif draw?(board)
-      puts "Cats game!"
+      puts "Cat's game!"
       break
     end
   end
