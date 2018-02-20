@@ -144,7 +144,7 @@ def play(board)
   turn_count = 0
   while turn_count < 9
     currentPlayer = current_player(board)
-    turn(board, currentPlayer)
+    turn(board)
     turn_count += 1
     if won?(board)
       winner = winner(board)
