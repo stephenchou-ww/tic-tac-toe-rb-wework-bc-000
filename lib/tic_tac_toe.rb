@@ -123,7 +123,7 @@ end
 def turn_count(board)
   turnCount = 0
   board.each do |i|
-    if i == X || i == O
+    if i == "X" || i == "O"
       turnCount += 1
     end
   end
