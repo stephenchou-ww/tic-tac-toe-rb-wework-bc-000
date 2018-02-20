@@ -110,6 +110,7 @@ def turn(board, current_player)
   if valid_move?(board, index)
     move(board, index, current_player)
     display_board(board)
+    return index
   else
     turn(board, current_player)
   end
