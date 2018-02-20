@@ -145,7 +145,7 @@ def play(board)
   while turn_count < 9
     currentPlayer = current_player(board)
     turn(board)
-    turn_count += 1
+    over?(board)
     overness = over?(board)
       
     if won?(board)
